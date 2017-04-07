@@ -1,0 +1,1025 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/arangodb/arangojs"
+
+    >arangojs (v5.6.0)</a>
+</h1>
+<h4>The official ArangoDB JavaScript driver.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.arangojs">module arangojs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.Database">
+            function <span class="apidocSignatureSpan">arangojs.</span>Database
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.aql">
+            function <span class="apidocSignatureSpan">arangojs.</span>aql
+            <span class="apidocSignatureSpan">(strings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.aqlQuery">
+            function <span class="apidocSignatureSpan">arangojs.</span>aqlQuery
+            <span class="apidocSignatureSpan">(strings)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">arangojs.</span>aql_query</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">arangojs.</span>collection</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">arangojs.</span>connection</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">arangojs.</span>cursor</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">arangojs.</span>database</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">arangojs.</span>error</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">arangojs.</span>graph</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">arangojs.</span>route</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.arangojs.aql_query">module arangojs.aql_query</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.aql_query.default">
+            function <span class="apidocSignatureSpan">arangojs.aql_query.</span>default
+            <span class="apidocSignatureSpan">(strings)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.arangojs.collection">module arangojs.collection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.collection.DocumentCollection">
+            function <span class="apidocSignatureSpan">arangojs.collection.</span>DocumentCollection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.collection.EdgeCollection">
+            function <span class="apidocSignatureSpan">arangojs.collection.</span>EdgeCollection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.collection._BaseCollection">
+            function <span class="apidocSignatureSpan">arangojs.collection.</span>_BaseCollection
+            <span class="apidocSignatureSpan">(connection, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.collection.default">
+            function <span class="apidocSignatureSpan">arangojs.collection.</span>default
+            <span class="apidocSignatureSpan">(connection, body)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">arangojs.collection.</span>_types</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">arangojs.collection.</span>types</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.arangojs.connection">module arangojs.connection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.connection.default">
+            function <span class="apidocSignatureSpan">arangojs.connection.</span>default
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.arangojs.cursor">module arangojs.cursor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.cursor.default">
+            function <span class="apidocSignatureSpan">arangojs.cursor.</span>default
+            <span class="apidocSignatureSpan">(connection, body)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.arangojs.database">module arangojs.database</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.database.default">
+            function <span class="apidocSignatureSpan">arangojs.database.</span>default
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.arangojs.error">module arangojs.error</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.error.default">
+            function <span class="apidocSignatureSpan">arangojs.error.</span>default
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.arangojs.graph">module arangojs.graph</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.graph.EdgeCollection">
+            function <span class="apidocSignatureSpan">arangojs.graph.</span>EdgeCollection
+            <span class="apidocSignatureSpan">(connection, name, graph)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.graph.VertexCollection">
+            function <span class="apidocSignatureSpan">arangojs.graph.</span>VertexCollection
+            <span class="apidocSignatureSpan">(connection, name, graph)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.graph.default">
+            function <span class="apidocSignatureSpan">arangojs.graph.</span>default
+            <span class="apidocSignatureSpan">(connection, name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.arangojs.route">module arangojs.route</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.arangojs.route.default">
+            function <span class="apidocSignatureSpan">arangojs.route.</span>default
+            <span class="apidocSignatureSpan">(connection, path, headers)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.arangojs" id="apidoc.module.arangojs">module arangojs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.Database" id="apidoc.element.arangojs.Database">
+        function <span class="apidocSignatureSpan">arangojs.</span>Database
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Database(config) {
+  _classCallCheck(this, Database);
+
+  this._connection = new _connection2.default(config);
+  this._api = this._connection.route(&#x27;/_api&#x27;);
+  this.name = this._connection.config.databaseName;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+let db1 = arangojs(); // convenience short-hand
+let db2 = new Database();
+let result = await db2.query(aql`RETURN ${Date.now()}`);
+
+// or plain old Node-style
+var arangojs = require(&#x27;arangojs&#x27;);
+var db1 = arangojs();
+var db2 = new arangojs.<span class="apidocCodeKeywordSpan">Database</span>();
+db2.query(
+{
+  query: &#x27;RETURN @arg0&#x27;,
+  bindVars: {arg0: Date.now()}
+},
+function (err, result) {
+  // ...
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.aql" id="apidoc.element.arangojs.aql">
+        function <span class="apidocSignatureSpan">arangojs.</span>aql
+        <span class="apidocSignatureSpan">(strings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function aql(strings) {
+  var bindVars = {};
+  var bindVals = [];
+  var query = strings[0];
+
+  for (var _len = arguments.length, args = Array(_len &#x3e; 1 ? _len - 1 : 0), _key = 1; _key &#x3c; _len; _key++) {
+    args[_key - 1] = arguments[_key];
+  }
+
+  for (var i = 0; i &#x3c; args.length; i++) {
+    var rawValue = args[i];
+    var value = rawValue;
+    if (rawValue &#x26;&#x26; typeof rawValue.toAQL === &#x27;function&#x27;) {
+      query += &#x27;&#x27; + rawValue.toAQL() + strings[i + 1];
+      continue;
+    }
+    var index = bindVals.indexOf(rawValue);
+    var isKnown = index !== -1;
+    var name = &#x27;value&#x27; + (isKnown ? index : bindVals.length);
+    if (rawValue &#x26;&#x26; rawValue.isArangoCollection) {
+      name = &#x27;@&#x27; + name;
+      value = rawValue.name;
+    }
+    if (!isKnown) {
+      bindVals.push(rawValue);
+      bindVars[name] = value;
+    }
+    query += &#x27;@&#x27; + name + strings[i + 1];
+  }
+  return { query: query, bindVars: bindVars };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.aqlQuery" id="apidoc.element.arangojs.aqlQuery">
+        function <span class="apidocSignatureSpan">arangojs.</span>aqlQuery
+        <span class="apidocSignatureSpan">(strings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function aql(strings) {
+  var bindVars = {};
+  var bindVals = [];
+  var query = strings[0];
+
+  for (var _len = arguments.length, args = Array(_len &#x3e; 1 ? _len - 1 : 0), _key = 1; _key &#x3c; _len; _key++) {
+    args[_key - 1] = arguments[_key];
+  }
+
+  for (var i = 0; i &#x3c; args.length; i++) {
+    var rawValue = args[i];
+    var value = rawValue;
+    if (rawValue &#x26;&#x26; typeof rawValue.toAQL === &#x27;function&#x27;) {
+      query += &#x27;&#x27; + rawValue.toAQL() + strings[i + 1];
+      continue;
+    }
+    var index = bindVals.indexOf(rawValue);
+    var isKnown = index !== -1;
+    var name = &#x27;value&#x27; + (isKnown ? index : bindVals.length);
+    if (rawValue &#x26;&#x26; rawValue.isArangoCollection) {
+      name = &#x27;@&#x27; + name;
+      value = rawValue.name;
+    }
+    if (!isKnown) {
+      bindVals.push(rawValue);
+      bindVars[name] = value;
+    }
+    query += &#x27;@&#x27; + name + strings[i + 1];
+  }
+  return { query: query, bindVars: bindVars };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.arangojs.aql_query" id="apidoc.module.arangojs.aql_query">module arangojs.aql_query</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.aql_query.default" id="apidoc.element.arangojs.aql_query.default">
+        function <span class="apidocSignatureSpan">arangojs.aql_query.</span>default
+        <span class="apidocSignatureSpan">(strings)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function aql(strings) {
+  var bindVars = {};
+  var bindVals = [];
+  var query = strings[0];
+
+  for (var _len = arguments.length, args = Array(_len &#x3e; 1 ? _len - 1 : 0), _key = 1; _key &#x3c; _len; _key++) {
+    args[_key - 1] = arguments[_key];
+  }
+
+  for (var i = 0; i &#x3c; args.length; i++) {
+    var rawValue = args[i];
+    var value = rawValue;
+    if (rawValue &#x26;&#x26; typeof rawValue.toAQL === &#x27;function&#x27;) {
+      query += &#x27;&#x27; + rawValue.toAQL() + strings[i + 1];
+      continue;
+    }
+    var index = bindVals.indexOf(rawValue);
+    var isKnown = index !== -1;
+    var name = &#x27;value&#x27; + (isKnown ? index : bindVals.length);
+    if (rawValue &#x26;&#x26; rawValue.isArangoCollection) {
+      name = &#x27;@&#x27; + name;
+      value = rawValue.name;
+    }
+    if (!isKnown) {
+      bindVals.push(rawValue);
+      bindVars[name] = value;
+    }
+    query += &#x27;@&#x27; + name + strings[i + 1];
+  }
+  return { query: query, bindVars: bindVars };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    var _connection$promisify12 = this._connection.promisify(cb),
+        promise = _connection$promisify12.promise,
+        callback = _connection$promisify12.callback;
+
+    this._api.put(&#x27;/simple/all&#x27;, _extends({}, opts, { collection: this.name }), function (err, res) {
+      return err ? callback(err) : callback(null, new _cursor2.<span class="apidocCodeKeywordSpan">default</span>(_this2._connection
+, res.body));
+    });
+    return promise;
+  }
+}, {
+  key: &#x27;any&#x27;,
+  value: function any(cb) {
+    var _connection$promisify13 = this._connection.promisify(cb),
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.arangojs.collection" id="apidoc.module.arangojs.collection">module arangojs.collection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.collection.DocumentCollection" id="apidoc.element.arangojs.collection.DocumentCollection">
+        function <span class="apidocSignatureSpan">arangojs.collection.</span>DocumentCollection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DocumentCollection() {
+  var _ref;
+
+  _classCallCheck(this, DocumentCollection);
+
+  for (var _len = arguments.length, args = Array(_len), _key = 0; _key &#x3c; _len; _key++) {
+    args[_key] = arguments[_key];
+  }
+
+  var _this5 = _possibleConstructorReturn(this, (_ref = DocumentCollection.__proto__ || Object.getPrototypeOf(DocumentCollection
+)).call.apply(_ref, [this].concat(args)));
+
+  _this5.type = types.DOCUMENT_COLLECTION;
+  return _this5;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+
+  // Collection manipulation
+
+}, {
+  key: &#x27;collection&#x27;,
+  value: function collection(collectionName) {
+    return new _collection.<span class="apidocCodeKeywordSpan">DocumentCollection</span>(this._connection, collectionName);
+  }
+}, {
+  key: &#x27;edgeCollection&#x27;,
+  value: function edgeCollection(collectionName) {
+    return new _collection.EdgeCollection(this._connection, collectionName);
+  }
+}, {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.collection.EdgeCollection" id="apidoc.element.arangojs.collection.EdgeCollection">
+        function <span class="apidocSignatureSpan">arangojs.collection.</span>EdgeCollection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EdgeCollection() {
+  var _ref2;
+
+  _classCallCheck(this, EdgeCollection);
+
+  for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 &#x3c; _len2; _key2++) {
+    args[_key2] = arguments[_key2];
+  }
+
+  var _this6 = _possibleConstructorReturn(this, (_ref2 = EdgeCollection.__proto__ || Object.getPrototypeOf(EdgeCollection)).call
+.apply(_ref2, [this].concat(args)));
+
+  _this6.type = types.EDGE_COLLECTION;
+  return _this6;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  key: &#x27;collection&#x27;,
+  value: function collection(collectionName) {
+    return new _collection.DocumentCollection(this._connection, collectionName);
+  }
+}, {
+  key: &#x27;edgeCollection&#x27;,
+  value: function edgeCollection(collectionName) {
+    return new _collection.<span class="apidocCodeKeywordSpan">EdgeCollection</span>(this._connection, collectionName);
+  }
+}, {
+  key: &#x27;listCollections&#x27;,
+  value: function listCollections(excludeSystem, cb) {
+    if (typeof excludeSystem === &#x27;function&#x27;) {
+      cb = excludeSystem;
+      excludeSystem = undefined;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.collection._BaseCollection" id="apidoc.element.arangojs.collection._BaseCollection">
+        function <span class="apidocSignatureSpan">arangojs.collection.</span>_BaseCollection
+        <span class="apidocSignatureSpan">(connection, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BaseCollection(connection, name) {
+  _classCallCheck(this, BaseCollection);
+
+  this.name = name;
+  this._urlPrefix = &#x27;/collection/&#x27; + name + &#x27;/&#x27;;
+  this._idPrefix = name + &#x27;/&#x27;;
+  this._connection = connection;
+  this._api = this._connection.route(&#x27;/_api&#x27;);
+  if (this._connection.arangoMajor &#x3e;= 3) {
+    this.first = undefined;
+    this.last = undefined;
+    this.createCapConstraint = undefined;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.collection.default" id="apidoc.element.arangojs.collection.default">
+        function <span class="apidocSignatureSpan">arangojs.collection.</span>default
+        <span class="apidocSignatureSpan">(connection, body)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function construct(connection, body) {
+  var Collection = body.type === types.EDGE_COLLECTION ? EdgeCollection : DocumentCollection;
+  return new Collection(connection, body.name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    var _connection$promisify12 = this._connection.promisify(cb),
+        promise = _connection$promisify12.promise,
+        callback = _connection$promisify12.callback;
+
+    this._api.put(&#x27;/simple/all&#x27;, _extends({}, opts, { collection: this.name }), function (err, res) {
+      return err ? callback(err) : callback(null, new _cursor2.<span class="apidocCodeKeywordSpan">default</span>(_this2._connection
+, res.body));
+    });
+    return promise;
+  }
+}, {
+  key: &#x27;any&#x27;,
+  value: function any(cb) {
+    var _connection$promisify13 = this._connection.promisify(cb),
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.arangojs.connection" id="apidoc.module.arangojs.connection">module arangojs.connection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.connection.default" id="apidoc.element.arangojs.connection.default">
+        function <span class="apidocSignatureSpan">arangojs.connection.</span>default
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Connection(config) {
+  _classCallCheck(this, Connection);
+
+  if (typeof config === &#x27;string&#x27;) {
+    config = { url: config };
+  }
+  this.config = _extends({}, Connection.defaults, config);
+  this.config.agentOptions = _extends({}, Connection.agentDefaults, this.config.agentOptions);
+  if (!this.config.headers) this.config.headers = {};
+  if (!this.config.headers[&#x27;x-arango-version&#x27;]) {
+    this.config.headers[&#x27;x-arango-version&#x27;] = this.config.arangoVersion;
+  }
+  this.arangoMajor = Math.floor(this.config.arangoVersion / 10000);
+
+  var _createRequest = (0, _request2.default)(this.config.url, this.config.agentOptions, this.config.agent),
+      request = _createRequest.request,
+      auth = _createRequest.auth,
+      url = _createRequest.url;
+
+  this._baseUrl = url;
+  this._request = request;
+  if (auth &#x26;&#x26; !this.config.headers[&#x27;authorization&#x27;]) {
+    this.config.headers[&#x27;authorization&#x27;] = &#x27;Basic &#x27; + (0, _btoa2.default)(auth);
+  }
+  if (this.config.databaseName === false) {
+    this._databasePath = &#x27;&#x27;;
+  } else {
+    this._databasePath = &#x27;/_db/&#x27; + this.config.databaseName;
+  }
+  this.promisify = (0, _promisify3.default)(this.config.promise);
+  this.retryOptions = {
+    forever: this.config.retryConnection,
+    retries: 0,
+    minTimeout: 5000,
+    randomize: true
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    var _connection$promisify12 = this._connection.promisify(cb),
+        promise = _connection$promisify12.promise,
+        callback = _connection$promisify12.callback;
+
+    this._api.put(&#x27;/simple/all&#x27;, _extends({}, opts, { collection: this.name }), function (err, res) {
+      return err ? callback(err) : callback(null, new _cursor2.<span class="apidocCodeKeywordSpan">default</span>(_this2._connection
+, res.body));
+    });
+    return promise;
+  }
+}, {
+  key: &#x27;any&#x27;,
+  value: function any(cb) {
+    var _connection$promisify13 = this._connection.promisify(cb),
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.arangojs.cursor" id="apidoc.module.arangojs.cursor">module arangojs.cursor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.cursor.default" id="apidoc.element.arangojs.cursor.default">
+        function <span class="apidocSignatureSpan">arangojs.cursor.</span>default
+        <span class="apidocSignatureSpan">(connection, body)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ArrayCursor(connection, body) {
+  _classCallCheck(this, ArrayCursor);
+
+  this.extra = body.extra;
+  this._connection = connection;
+  this._api = this._connection.route(&#x27;/_api&#x27;);
+  this._result = body.result;
+  this._hasMore = Boolean(body.hasMore);
+  this._id = body.id;
+  this.count = body.count;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    var _connection$promisify12 = this._connection.promisify(cb),
+        promise = _connection$promisify12.promise,
+        callback = _connection$promisify12.callback;
+
+    this._api.put(&#x27;/simple/all&#x27;, _extends({}, opts, { collection: this.name }), function (err, res) {
+      return err ? callback(err) : callback(null, new _cursor2.<span class="apidocCodeKeywordSpan">default</span>(_this2._connection
+, res.body));
+    });
+    return promise;
+  }
+}, {
+  key: &#x27;any&#x27;,
+  value: function any(cb) {
+    var _connection$promisify13 = this._connection.promisify(cb),
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.arangojs.database" id="apidoc.module.arangojs.database">module arangojs.database</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.database.default" id="apidoc.element.arangojs.database.default">
+        function <span class="apidocSignatureSpan">arangojs.database.</span>default
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Database(config) {
+  _classCallCheck(this, Database);
+
+  this._connection = new _connection2.default(config);
+  this._api = this._connection.route(&#x27;/_api&#x27;);
+  this.name = this._connection.config.databaseName;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    var _connection$promisify12 = this._connection.promisify(cb),
+        promise = _connection$promisify12.promise,
+        callback = _connection$promisify12.callback;
+
+    this._api.put(&#x27;/simple/all&#x27;, _extends({}, opts, { collection: this.name }), function (err, res) {
+      return err ? callback(err) : callback(null, new _cursor2.<span class="apidocCodeKeywordSpan">default</span>(_this2._connection
+, res.body));
+    });
+    return promise;
+  }
+}, {
+  key: &#x27;any&#x27;,
+  value: function any(cb) {
+    var _connection$promisify13 = this._connection.promisify(cb),
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.arangojs.error" id="apidoc.module.arangojs.error">module arangojs.error</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.error.default" id="apidoc.element.arangojs.error.default">
+        function <span class="apidocSignatureSpan">arangojs.error.</span>default
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ArangoError(obj) {
+  _classCallCheck(this, ArangoError);
+
+  var _this = _possibleConstructorReturn(this, (ArangoError.__proto__ || Object.getPrototypeOf(ArangoError)).call(this));
+
+  _this.message = obj.errorMessage;
+  _this.errorNum = obj.errorNum;
+  _this.code = obj.code;
+  var err = new Error(_this.message);
+  err.name = _this.name;
+  if (err.fileName) _this.fileName = err.fileName;
+  if (err.lineNumber) _this.lineNumber = err.lineNumber;
+  if (err.columnNumber) _this.columnNumber = err.columnNumber;
+  if (err.stack) _this.stack = err.stack;
+  if (err.description) _this.description = err.description;
+  if (err.number) _this.number = err.number;
+  return _this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    var _connection$promisify12 = this._connection.promisify(cb),
+        promise = _connection$promisify12.promise,
+        callback = _connection$promisify12.callback;
+
+    this._api.put(&#x27;/simple/all&#x27;, _extends({}, opts, { collection: this.name }), function (err, res) {
+      return err ? callback(err) : callback(null, new _cursor2.<span class="apidocCodeKeywordSpan">default</span>(_this2._connection
+, res.body));
+    });
+    return promise;
+  }
+}, {
+  key: &#x27;any&#x27;,
+  value: function any(cb) {
+    var _connection$promisify13 = this._connection.promisify(cb),
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.arangojs.graph" id="apidoc.module.arangojs.graph">module arangojs.graph</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.graph.EdgeCollection" id="apidoc.element.arangojs.graph.EdgeCollection">
+        function <span class="apidocSignatureSpan">arangojs.graph.</span>EdgeCollection
+        <span class="apidocSignatureSpan">(connection, name, graph)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GraphEdgeCollection(connection, name, graph) {
+  _classCallCheck(this, GraphEdgeCollection);
+
+  var _this2 = _possibleConstructorReturn(this, (GraphEdgeCollection.__proto__ || Object.getPrototypeOf(GraphEdgeCollection)).call
+(this, connection, name));
+
+  _this2.type = _collection._types.EDGE_COLLECTION;
+  _this2.graph = graph;
+  _this2._gharial = _this2._api.route(&#x27;/gharial/&#x27; + _this2.graph.name + &#x27;/edge&#x27;);
+  return _this2;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  key: &#x27;collection&#x27;,
+  value: function collection(collectionName) {
+    return new _collection.DocumentCollection(this._connection, collectionName);
+  }
+}, {
+  key: &#x27;edgeCollection&#x27;,
+  value: function edgeCollection(collectionName) {
+    return new _collection.<span class="apidocCodeKeywordSpan">EdgeCollection</span>(this._connection, collectionName);
+  }
+}, {
+  key: &#x27;listCollections&#x27;,
+  value: function listCollections(excludeSystem, cb) {
+    if (typeof excludeSystem === &#x27;function&#x27;) {
+      cb = excludeSystem;
+      excludeSystem = undefined;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.graph.VertexCollection" id="apidoc.element.arangojs.graph.VertexCollection">
+        function <span class="apidocSignatureSpan">arangojs.graph.</span>VertexCollection
+        <span class="apidocSignatureSpan">(connection, name, graph)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GraphVertexCollection(connection, name, graph) {
+  _classCallCheck(this, GraphVertexCollection);
+
+  var _this = _possibleConstructorReturn(this, (GraphVertexCollection.__proto__ || Object.getPrototypeOf(GraphVertexCollection)).
+call(this, connection, name));
+
+  _this.type = _collection._types.DOCUMENT_COLLECTION;
+  _this.graph = graph;
+  _this._gharial = _this._api.route(&#x27;/gharial/&#x27; + _this.graph.name + &#x27;/vertex&#x27;);
+  return _this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.graph.default" id="apidoc.element.arangojs.graph.default">
+        function <span class="apidocSignatureSpan">arangojs.graph.</span>default
+        <span class="apidocSignatureSpan">(connection, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Graph(connection, name) {
+  _classCallCheck(this, Graph);
+
+  this.name = name;
+  this._connection = connection;
+  this._api = this._connection.route(&#x27;/_api&#x27;);
+  this._gharial = this._api.route(&#x27;/gharial/&#x27; + this.name);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    var _connection$promisify12 = this._connection.promisify(cb),
+        promise = _connection$promisify12.promise,
+        callback = _connection$promisify12.callback;
+
+    this._api.put(&#x27;/simple/all&#x27;, _extends({}, opts, { collection: this.name }), function (err, res) {
+      return err ? callback(err) : callback(null, new _cursor2.<span class="apidocCodeKeywordSpan">default</span>(_this2._connection
+, res.body));
+    });
+    return promise;
+  }
+}, {
+  key: &#x27;any&#x27;,
+  value: function any(cb) {
+    var _connection$promisify13 = this._connection.promisify(cb),
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.arangojs.route" id="apidoc.module.arangojs.route">module arangojs.route</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.arangojs.route.default" id="apidoc.element.arangojs.route.default">
+        function <span class="apidocSignatureSpan">arangojs.route.</span>default
+        <span class="apidocSignatureSpan">(connection, path, headers)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Route(connection, path, headers) {
+  _classCallCheck(this, Route);
+
+  if (!path) path = &#x27;&#x27;;else if (path.charAt(0) !== &#x27;/&#x27;) path = &#x27;/&#x27; + path;
+  this._connection = connection;
+  this._path = path;
+  this._headers = headers;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    var _connection$promisify12 = this._connection.promisify(cb),
+        promise = _connection$promisify12.promise,
+        callback = _connection$promisify12.callback;
+
+    this._api.put(&#x27;/simple/all&#x27;, _extends({}, opts, { collection: this.name }), function (err, res) {
+      return err ? callback(err) : callback(null, new _cursor2.<span class="apidocCodeKeywordSpan">default</span>(_this2._connection
+, res.body));
+    });
+    return promise;
+  }
+}, {
+  key: &#x27;any&#x27;,
+  value: function any(cb) {
+    var _connection$promisify13 = this._connection.promisify(cb),
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
