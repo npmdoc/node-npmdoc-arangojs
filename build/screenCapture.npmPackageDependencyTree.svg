@@ -20,7 +20,7 @@
 <tspan x="10" y="282">  ├── retry@0.10.1 </tspan>
 <tspan x="10" y="298">  ├── utf8-length@0.0.1 </tspan>
 <tspan x="10" y="314">  └─┬ xhr@2.4.0 </tspan>
-<tspan x="10" y="330">    ├─┬ global@4.3.1 </tspan>
+<tspan x="10" y="330">    ├─┬ global@4.3.2 </tspan>
 <tspan x="10" y="346">    │ ├─┬ min-document@2.19.0 </tspan>
 <tspan x="10" y="362">    │ │ └── dom-walk@0.1.1 </tspan>
 <tspan x="10" y="378">    │ └── process@0.5.2 </tspan>
