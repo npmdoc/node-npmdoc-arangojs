@@ -4,7 +4,7 @@
 <tspan x="10" y="26">2 megabytes installed</tspan>
 <tspan x="10" y="42"></tspan>
 <tspan x="10" y="58">node_modules</tspan>
-<tspan x="10" y="74">└─┬ arangojs@5.6.0 </tspan>
+<tspan x="10" y="74">└─┬ arangojs@5.6.1 </tspan>
 <tspan x="10" y="90">  ├── es6-error@4.0.2 </tspan>
 <tspan x="10" y="106">  ├─┬ http-errors@1.6.1 </tspan>
 <tspan x="10" y="122">  │ ├── depd@1.1.0 </tspan>
